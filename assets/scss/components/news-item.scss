@@ -1,0 +1,108 @@
+.news-item {
+    .news-item-inner {
+        position: relative;
+        margin-bottom: 30px;
+        padding-top: 10px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            .img-container {
+                top: -20px;
+                padding: 7px;
+
+                img {
+                    box-shadow: 0 13px 15px -6px rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+    }
+
+    .img-container {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 220px;
+        padding: 0 10px;
+        border: 1px solid #fff;
+        transition: top .3s, padding .3s;
+
+        img {
+            object-fit: cover;
+            border-radius: 4px;
+            transition: box-shadow .3s;
+        }
+    }
+
+    .news-item--content {
+        padding: 15px 25px 25px;
+    }
+
+    .author-text {
+        margin: 0 0 20px;
+        color: #858585;
+        font-size: 14px;
+    }
+
+    .subtitle {
+        margin-bottom: 0;
+        padding-bottom: 7px;
+        color: $primary;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+
+    .title {
+        margin-bottom: 7px;
+        max-height: 41px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        overflow: hidden;
+
+        @include tablet {
+            max-height: 62px;
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+        a {
+            color: $text-color;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .teaser-text {
+        position: relative;
+        margin: 0;
+        color: #858585;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .item-news--btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: $primary;
+        border-radius: 30px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: #3ea4ad;
+            color: #fff;
+        }
+    }
+}

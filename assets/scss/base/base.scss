@@ -1,0 +1,57 @@
+html {
+    font-family: Open Sans, sans-serif;
+    font-size: 15px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+ *::before,
+ *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    color: #3a3e47;
+}
+
+.main-page-wrapper {
+    z-index: 1;
+}
+
+.page-wrapper {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+
+    @include tablet {
+        max-width: 600px;
+    }
+
+    @include tablet-lg {
+        max-width: 1260px;
+        padding: 0 90px;
+    }
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    transition: color .25s cubic-bezier(.25,.8,.25,1);
+
+    &:hover {
+        color: rgb(44, 159, 165);
+        text-decoration: none;
+    }
+}
+
+.main-content {
+    min-height: 564px;
+}

@@ -1,0 +1,113 @@
+.contact-section {
+    padding: 30px 0 70px;
+
+    @include tablet {
+        padding: 55px;
+    }
+
+    .contact-title {
+        margin-bottom: 55px;
+        font-size: 42px;
+        line-height: 42px;
+        
+        font-family: 'Nexa-Bold';
+    }
+}
+
+.form-container {
+    max-width: 600px;
+
+    @include tablet-lg {
+        max-width: 850px;
+    }
+}
+
+.contact-column {
+    position: relative;
+    padding: 35px 15px 27px;
+}
+
+.contact-input, .contact-textarea {
+    position: relative;
+    width: 100%;
+    padding: 13px 0;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 22px;
+    outline: none;
+    z-index: 2;
+}
+
+.contact-textarea {
+    resize: none;
+}
+
+.contact-label {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    margin: 0;
+    height: 100%;
+    padding: 49px 0 0;
+    color: #acacac;
+    font-size: 14px;
+    line-height: 22px;
+
+    div {
+        margin-top: 0;
+        transition: margin-top .3s;
+    }
+
+    .contact-input:focus ~&, .contact-textarea:focus ~& {
+        font-size: 12px;
+        line-height: 12px;
+
+        div {
+            margin-top: -26px;
+        }
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    .contact-textarea ~& {
+        &::before {
+            bottom: 34px;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 28px;
+        display: block;
+        height: 2px;
+        width: 0;
+        background: $primary;
+        transition: width .5s;
+    }
+}
+
+.contact-submit {
+    padding: 16px 23px;
+    background: $primary;
+    border: 0;
+    border-radius: 200px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: opacity .2s;
+
+    font-family: 'Nexa-Bold';
+    
+    &:hover {
+        opacity: .85;
+    }
+}

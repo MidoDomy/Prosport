@@ -1,0 +1,91 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    background: #fff;
+    transition: background-color .4s;
+    z-index: 999;
+
+    @include tablet-lg {
+        padding: 10px 0;
+        background: transparent;
+    }
+
+    &.header-small {
+        @include tablet-lg {
+            background: #fff;
+            
+            .logo-container {
+                max-width: 250px;
+            }
+    
+            .logo-normal {
+                opacity: 1;
+            }
+    
+            .logo-white {
+                opacity: 0;
+            }
+        }
+    }
+
+    .logo-normal {
+        transition: opacity .3s;
+
+        @include tablet-lg {
+            opacity: 0;
+        }
+    }
+
+    .logo-white {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition: opacity .3s;
+        opacity: 0;
+        
+        @include tablet-lg {
+            opacity: 1;
+        }
+    }
+}
+
+//top-bar
+.top-bar {
+    position: relative;
+    z-index: 9999;
+}
+
+.desktop-lang-list {
+    margin-bottom: 5px;
+}
+
+.desktop-item-lang {
+    margin: 0 7px;
+    font-family: 'Nexa-Bold';
+    font-size: 14px;
+}
+
+.logo-col {
+    z-index: 100;
+}
+
+.logo-container {
+    max-width: 155px;
+    transition: max-width .4s;
+    
+    @include tablet-lg {
+        max-width: 300px;
+    }
+}
+
+.activate-dark-logo {
+    opacity: 1 !important;
+}
+
+.deactivate-white-logo {
+    opacity: 0 !important;
+}

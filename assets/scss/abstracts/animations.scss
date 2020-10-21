@@ -1,0 +1,39 @@
+@keyframes scrollDownIconJump {
+
+    0% {
+        top: 0;
+    }
+    50% {
+        top: 0;
+    }
+    75% {
+        top: 5px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes scrollDownIconBeforeJump {
+
+    0% {
+        top: 13px;
+        opacity: 1;
+    }
+    50% {
+        top: 13px;
+        opacity: 1;
+    }
+    75% {
+        top: 25px;
+        opacity: 0;
+    }
+    78% {
+        top: 17px;
+        opacity: 0;
+    }
+    100% {
+        top: 13px;
+        opacity: 1;
+    }
+}

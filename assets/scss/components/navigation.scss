@@ -1,0 +1,205 @@
+.navigation-col {
+    z-index: 999;
+}
+
+.menu-bars {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 22px;
+    color: #c9c9c9;
+    z-index: 100;
+    cursor: pointer;
+
+    @include tablet-lg {
+        width: 34px;
+        height: 24px;
+    }
+
+    &.activate-white-hover:hover {
+        color: #fff;
+    }
+
+    &:hover {
+        color: #444;
+    }
+
+    &.active {
+        color: #fff;
+
+        @include tablet-lg {
+            color: #fff;
+        }
+
+        .bar.top {
+            top: 1px;
+            transform: rotate(45deg);
+
+            @include tablet-lg {
+                top: -2px;
+            }
+        }
+
+        .bar.center {
+            opacity: 0;
+        }
+
+        .bar.bottom {
+            bottom: 1px;
+            transform: rotate(-45deg);
+
+            @include tablet-lg {
+                bottom: -2px;
+            }
+        }
+    }
+
+    .bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: currentColor;
+        border-radius: 1px;
+        color: inherit;
+        transition: all .3s;
+        transform-origin: left;
+
+        @include tablet-lg {
+            height: 4px;       
+        }
+
+        &.top {
+            top: 3px;
+
+            @include tablet-lg {
+                top: 0;
+            }
+        }
+
+        &.center {
+            @include vertical-center;
+        }
+
+        &.bottom {
+            bottom: 3px;
+
+            @include tablet-lg {
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.navigation-logo-container {
+    padding-top: 15px;
+
+    @include tablet-lg {
+        padding-top: 36px;
+    }
+}
+
+.mobile-lang-list {
+    margin-top: 25px;
+}
+
+.mobile-item-lang {
+    margin: 0 7px;
+
+    a {
+        display: block;
+        height: 41px;
+        width: 41px;
+        border: 1px solid #fff;
+        line-height: 41px;
+        text-align: center;
+        transition: all .3s;
+
+        &:focus {
+            border-color: $primary;
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
+
+.navigation-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(27, 31, 38);
+    z-index: 99;
+    overflow-y: scroll;
+    transition: opacity .4s;
+
+    &.active {
+        display: block;
+        animation-name: showNavigation;
+        animation-iteration-count: 1;
+        animation-duration: .4s;
+    }
+
+    &.deactive {
+        opacity: 0;
+    }
+}
+
+@keyframes showNavigation {
+
+    0% {
+        transform: scale(.85);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.navigation-list {
+    padding: 20px 0 0;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 33px;
+    text-align: center;
+    
+    font-family: 'Nexa-Bold';
+
+    @include tablet-lg {
+        padding: 60px 0 30px;
+        font-size: 55px;
+        line-height: 48px;
+    }
+}
+
+.navigation-item {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.navigation-link {
+    display: inline-block;
+    padding: 6px 0;
+    color: $primary;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.navigation-copyright { 
+    background: rgb(27, 31, 38);
+    padding-bottom: 10px;
+    color: #c0c0c0;
+
+    @include tablet-lg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;   
+    }
+}

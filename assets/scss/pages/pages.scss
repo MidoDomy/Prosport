@@ -1,0 +1,42 @@
+.subpages {
+    .page-title {
+        margin-bottom: 30px;
+        color: $primary;
+        font-family: 'Nexa-Bold';
+        text-align: center;
+    }
+
+    .main-content-inner {
+        padding: 150px 0 90px;
+
+        @include tablet-lg {
+            padding: 180px 0 120px;
+        }
+    }
+
+    .banner {
+        padding: 150px 0 90px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: $text-color;
+        text-align: center;
+
+        @include tablet-lg {
+            padding: 180px 0 120px;
+        }
+
+        p {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 530px;
+            font-size: 18px;
+            line-height: 25px;
+
+            @include tablet-lg {
+                font-size: 22px;
+                line-height: 27px;
+            }
+        }
+    }
+}

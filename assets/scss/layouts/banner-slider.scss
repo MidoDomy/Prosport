@@ -1,0 +1,90 @@
+.banner-slider-section {
+    height: 600px;
+    margin-top: 70px;
+    overflow: hidden;
+
+    font-family: 'Nexa-Bold';
+
+    @include tablet-lg {
+        height: 725px;
+        margin-top: 0;
+    }
+
+    .swiper-wrapper {
+        height: 580px;
+
+        @include tablet-lg {
+            height: 725px;
+        }
+    }
+
+    .cover-black {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .slide-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slide-content {
+        width: 100%;
+        position: absolute;
+        @include absolute-center;
+        top: 55%;
+        color: #fff; 
+    }
+
+    .slide-title {
+        padding: 0 10px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 40px;
+        letter-spacing: 1px;
+
+        @include tablet {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        
+        @include tablet-lg {
+            font-size: 42px;
+        }
+    }
+}
+
+.slide-button {
+    position: absolute;
+    @include horizontal-center;
+    bottom: 30px;
+    width: 30px;
+    z-index: 1;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 13px;
+        @include horizontal-center;
+        display: block;
+        height: 6px;
+        width: 1px;
+        background: rgba(255, 255, 255, .5);
+        border-radius: 5px;
+        animation: scrollDownIconBeforeJump 2s infinite;
+    }
+}
+
+.slide-btn-icon {
+    position: relative;
+    animation: scrollDownIconJump 2s infinite;
+}

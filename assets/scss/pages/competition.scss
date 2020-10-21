@@ -1,0 +1,23 @@
+.competition-page {
+    .banner {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0.5)), url('../images/competition/map.svg');
+        background-size: 100% 100%;
+    }
+
+    .compentition-table {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto 50px;
+        font-size: 16px;
+        line-height: 22px;
+
+        @include tablet-lg {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        th {
+            vertical-align: top;
+        }
+    }
+}

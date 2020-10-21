@@ -1,0 +1,41 @@
+//abstracts
+    //mixins
+    @import 'abstracts/mixins/absolute-center';
+    @import 'abstracts/mixins/responsive';
+@import 'abstracts/color';
+@import 'abstracts/typography';
+@import 'abstracts/animations';
+
+//base
+@import 'base/base';
+@import 'base/custom-classes';
+
+//components
+@import 'components/preloading';
+@import 'components/navigation';
+@import 'components/cookies.scss';
+@import 'components/news-item';
+@import 'components/sliders';
+@import 'components/pagination';
+
+//layouts
+@import 'layouts/header';
+@import 'layouts/banner-slider';
+@import 'layouts/title-section';
+@import 'layouts/grid-section';
+@import 'layouts/industry';
+@import 'layouts/info';
+@import 'layouts/clients';
+@import 'layouts/properties';
+@import 'layouts/contact';
+@import 'layouts/news-slider';
+@import 'layouts/footer';
+@import 'layouts/scroll-up';
+
+//pages
+@import 'pages/pages';
+@import 'pages/about-us';
+@import 'pages/inovations';
+@import 'pages/competition';
+@import 'pages/contact';
+@import 'pages/news';

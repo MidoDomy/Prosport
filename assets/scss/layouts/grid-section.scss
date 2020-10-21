@@ -1,0 +1,189 @@
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'area1'
+        'area1'
+        'area3'
+        'area5'
+        'area4'
+        'area4'
+        'area6'
+        'area8'
+        'area8'
+        'area2'
+        'area7';
+    height: 3412px;
+
+    @include tablet {
+        grid-template-areas:
+            'area1 area3'
+            'area1 area6'
+            'area5 area5'
+            'area4 area8'
+            'area4 area8'
+            'area2 area7';
+        height: 2316px;
+    }
+
+    @include tablet-lg {
+        grid-template-areas:
+            'area1 area3 area5 area5'
+            'area1 area4 area6 area8'
+            'area2 area4 area7 area8';
+        height: 780px;
+    }
+
+    &> div {
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Nexa-Bold';
+        font-size: 30px;
+        overflow: hidden;
+    
+        &:hover {
+            .background-image {
+                transform: scale(1.15);
+
+                &::before {
+                    background-color: rgba(0, 0, 0, .4);
+                }
+            }
+
+            .item-title {
+                opacity: 0;
+            }
+
+            .item-text {
+                opacity: 1;
+            }
+        }
+    
+        .background-image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            transition: transform .5s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, .2);
+                transition: background-color .4s;
+            }
+        }
+    }
+
+    .item1 { 
+        grid-area: area1;
+
+        .background-image {
+            background-image: url('../images/grid-section/area1.jpg');
+        }
+    }
+
+    .item2 { 
+        grid-area: area6;
+
+        .background-image {
+            background-image: url('../images/grid-section/area2.jpg');
+        }
+    }
+
+    .item3 { 
+        grid-area: area3;
+
+        .background-image {
+            background-image: url('../images/grid-section/area3.jpg');
+
+            &::before {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+
+    .item4 { 
+        grid-area: area4;
+
+        .background-image {
+            background-image: url('../images/grid-section/area4.png');
+        }
+    }
+
+    .item5 { 
+        grid-area: area5;
+
+        .background-image {
+            background-image: url('../images/grid-section/area5.jpg');
+        }
+    }
+
+    .item6 { 
+        grid-area: area2;
+
+        .background-image {
+            background-image: url('../images/grid-section/area6.jpg');
+        }
+    }
+
+    .item7 { 
+        grid-area: area7;
+
+        .background-image {
+            background-image: url('../images/grid-section/area7.jpg');
+
+            &::before {
+                background: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+
+    .item8 { 
+        grid-area: area8;
+
+        .background-image {
+            background-image: url('../images/grid-section/area8.jpg');
+        }
+    }
+
+    .item-title {
+        position: absolute;
+        @include absolute-center;
+        width: 100%;
+        max-width: 200px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 33px;
+        transition: opacity .4s;
+
+        @include tablet-lg {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        &.title-top {
+            top: 100px;
+        }
+    }
+
+    .item-text {
+        position: absolute;
+        @include absolute-center;
+        color: #fff;
+        font-size: 20px;
+        width: 100%;
+        max-width: 90%;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+}

@@ -1,0 +1,27 @@
+.scroll-to-top-container {
+    position: fixed;
+    bottom: -40px;
+    right: 20px;
+    transition: bottom .3s;
+
+    &.active {
+        bottom: 20px;
+    }
+}
+
+.btn-scroll-up {
+    padding: 0 10px;
+    height: 30px;
+    width: 30px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .3);
+    line-height: 30px;
+    transition: background-color .2s;
+    outline: none;
+
+    &:hover, &:focus {
+        background: $primary;
+        outline: none;
+    }
+}

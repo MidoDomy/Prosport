@@ -1,0 +1,72 @@
+.loading-container {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(27, 31, 38);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.load-enter-active, .load-leave-active {
+    transition: opacity .5s;
+}
+
+.load-enter, .load-leave-to {
+    opacity: 0;
+}
+
+.circle-container {
+    position: absolute;
+    @include absolute-center;
+    height: 70px;
+    width: 70px;
+    animation: loadScale 1.8s infinite;
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-width: 7px;
+        border-style: solid;
+        border-color: $primary transparent $primary $primary;
+        border-radius: 50%;
+        animation: loadSpin 1.5s infinite;
+    }
+
+    .circle2 {
+        animation-delay: .1s;
+    }
+
+    .circle3 {
+        animation-delay: .2s;
+    }
+}
+
+@keyframes loadScale {
+
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes loadSpin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(130deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

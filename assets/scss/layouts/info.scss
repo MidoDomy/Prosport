@@ -1,0 +1,40 @@
+.info-section {
+    background-image: url('../images/info/info-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-column {
+    padding: 95px 20px;
+    transition: background-color .35s;
+
+    @include tablet {
+        padding: 115px 40px;
+    }
+
+    &:hover {
+        background: rgba(10, 10, 10, .5);
+    }
+}
+
+.info-title {
+    max-width: 160px;
+    margin: 0 auto 15px;
+    color: $primary;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 18px;
+        line-height: 18px;
+    }
+}
+
+.info-text {
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+}

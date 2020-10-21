@@ -1,0 +1,7 @@
+.calendar-column {
+    padding: 0 5px;
+
+    @include tablet {
+        padding: 0 15px;
+    }
+}

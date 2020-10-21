@@ -1,0 +1,29 @@
+.title-section {
+    padding: 48px 0;
+    text-align: center;
+
+    @include tablet {
+        padding: 106px 0;
+    }
+
+    @include tablet-lg {
+        padding: 165px 0;
+    }
+
+    .title {
+        max-width: 600px;
+        margin: 0 auto;
+        color: $text-color;
+        font-size: 40px;
+        line-height: 43px;
+
+        @include tablet {
+            font-size: 75px;
+            line-height: 78px;
+        }
+
+        @include tablet-lg {
+            max-width: 700px;
+        }
+    }
+}

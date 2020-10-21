@@ -1,0 +1,52 @@
+.cookieControl {
+    z-index: 999 !important;
+}
+
+.cookieControl__BarContainer {
+    flex-direction: column;
+
+    @include tablet-lg {
+        flex-direction: row;
+        align-items: center !important;
+    }
+}
+
+.cookieControl__Bar {
+    background: #444 !important;
+
+    p {
+        font-size: 14px;
+    }
+
+    .cookieControl__BarButtons {
+        margin: 20px auto 0;
+
+        @include tablet-lg {
+            margin-left: 15px;
+            min-width: 215px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 14px;
+
+            &:hover {
+                background: $primary;
+            }
+        }
+    }
+}
+
+.cookieControl__ControlButton {
+    right: auto;
+    left: 20px;
+}
+
+//modal
+.cookieControl__Modal {
+    .cookieControl__ModalContent {
+        button {
+            padding: 7px 15px;
+        }
+    }
+}
